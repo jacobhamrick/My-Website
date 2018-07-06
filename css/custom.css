@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  margin: 0; }
+
+.bodyWrap {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100vw;
+  padding: 30px;
+  background-color: #fffff8; }
+
+/*
+--------------------------------------------------------------------------------
+----------                       FONTS                                ----------
+--------------------------------------------------------------------------------
+*/
+@font-face {
+  font-family: Bluu Next;
+  font-weight: bold;
+  src: url("/fonts/BluuNext-Bold.otf"); }
+
+@font-face {
+  font-family: Bluu Next;
+  font-weight: bold;
+  font-style: italic;
+  src: url("/fonts/BluuNext-Bolditalic.otf"); }
+
+h1 {
+  font-size: 3em; }
+
+a {
+  font-size: 2em; }
+
+h1,
+a {
+  font-family: "Bluu Next";
+  color: #000008;
+  margin: 0; }
+
+.sun,
+.moon {
+  width: 50%;
+  border: 2px solid black;
+  padding: 15px; }
+
+.moon {
+  background-color: #000008; }
+
+.header {
+  display: flex;
+  border-bottom: 2px solid black; }
+
+.pages {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: auto;
+  border-bottom: 2px solid black; }

@@ -4,7 +4,14 @@
 
 body {
   margin: 0;
+
 }
+
+
+$green: #79C753;
+$vanilla: #F0EDE5;
+$mainFont: 'TeX Gyre Heros';
+$borders: 3px solid;
 
 .bodyWrap {
   display: flex;
@@ -12,50 +19,80 @@ body {
   height: 100vh;
   width: 100vw;
   padding: 30px;
-  background-color: #fffff8;
+  background-color: $vanilla;
 }
+
 /*
 --------------------------------------------------------------------------------
 ----------                       FONTS                                ----------
 --------------------------------------------------------------------------------
 */
-@font-face { font-family: Bluu Next; font-weight: bold; src: url('/fonts/BluuNext-Bold.otf'); }
-@font-face { font-family: Bluu Next; font-weight: bold; font-style: italic; src: url('/fonts/BluuNext-Bolditalic.otf');}
+@font-face { font-family: TeX Gyre Heros; src: url('/fonts/texgyreheros-regular.otf'); }
 
-h1 {
-  font-size: 3em;
+
+
+hr {
+  color: $green;
+  border-style: solid;
+  border-width: 1.5px;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
 }
 
-a {
-  font-size: 2em;
-}
-$Bluu: 'Bluu Next';
-$borders: 2px solid black;
-h1,
-a {
-  font-family:$Bluu;
-  color: #000008;
+
+h1 {font-size: 4vw; font-weight: normal;}
+a, p { font-size: 3vw;}
+
+
+h1, h2, h3, h4, h5, h6,
+a, p, ul, ol, li {
+  color: $green;
+  font-family: $mainFont;
   margin: 0;
 }
-.sun,
-.moon {
-  width: 50%;
-  border: $borders;
-  padding: 15px;
 
+a {
+  text-decoration: none;
+  transition: .5s;
 }
-.moon {
-  background-color: #000008;
+
+a:hover {
+  color: #E69060;
 }
+i {
+  color: $green;
+}
+.nav,
+.portfolio {
+  width: 50%;
+  padding: 15px;
+  position: relative;
+  border: $borders $green;
+}
+
 .header {
   display: flex;
-  border-bottom: $borders;
 }
 
-.pages {
+.nav {
+  background-color: $vanilla;
+  border-right: none;
+}
+
+.portfolio {
+  background-color: $vanilla;
+}
+
+.pageList {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   height: auto;
-  border-bottom: $borders;
+}
+.contact {
+
+}
+#email {
+  font-size: 2rem;
 }

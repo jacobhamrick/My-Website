@@ -34,7 +34,7 @@ h1 {
   font-weight: normal; }
 
 a, p {
-  font-size: 3vw; }
+  font-size: 2.8vw; }
 
 h1, h2, h3, h4, h5, h6,
 a, p, ul, ol, li {
@@ -74,6 +74,3 @@ i {
   flex-direction: column;
   align-items: flex-start;
   height: auto; }
-
-#email {
-  font-size: 2rem; }

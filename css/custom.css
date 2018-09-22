@@ -77,7 +77,8 @@ i {
   background-color: #F0EDE5; }
 
 .portfolio {
-  border-top: none; }
+  border-top: none;
+  height: auto; }
 
 .pageList {
   display: flex;

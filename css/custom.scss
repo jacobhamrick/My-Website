@@ -2,37 +2,43 @@
   box-sizing: border-box;
 }
 
+/*
+--------------------------------------------------------------------------------
+----------                    PAGE DEFAULTS                           ----------
+--------------------------------------------------------------------------------
+*/
+
 body {
   margin: 0;
 
 }
 
+$speed: 0.5s;
 
-$green: #79C753;
-$vanilla: #F0EDE5;
+/* ---------- COLORS ----------   */
+$primaryColor: #00c853; /* Text, lines, borders */
+$secondaryColor: #ff6d00; /* Link hover */
+$backgroundColor: #F0EDE5;
+
 $mainFont: 'TeX Gyre Heros';
 $borders: 3px solid;
 
+/* ---------- BODY WRAP ----------   */
 .bodyWrap {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   height: 100vh;
   width: 100vw;
   padding: 30px;
-  background-color: $vanilla;
+  background-color: $backgroundColor;
 }
 
-/*
---------------------------------------------------------------------------------
-----------                       FONTS                                ----------
---------------------------------------------------------------------------------
-*/
+/* ---------- FONT ----------   */
 @font-face { font-family: TeX Gyre Heros; src: url('/fonts/texgyreheros-regular.otf'); }
 
-
-
+/* ---------- LINE ----------   */
 hr {
-  color: $green;
+  color: $primaryColor;
   border-style: solid;
   border-width: 1.5px;
   width: 100%;
@@ -40,49 +46,53 @@ hr {
   margin-right: 0;
 }
 
-
+/* ---------- TEXT STYLES ----------   */
 h1 {font-size: 4vw; font-weight: normal;}
 a, p { font-size: 3vw;}
 
-
 h1, h2, h3, h4, h5, h6,
 a, p, ul, ol, li {
-  color: $green;
+  color: $primaryColor;
   font-family: $mainFont;
   margin: 0;
 }
 
 a {
   text-decoration: none;
-  transition: .5s;
+  transition: $speed;
 }
 
 a:hover {
-  color: #E69060;
-}
-i {
-  color: $green;
-}
-.nav,
-.portfolio {
-  width: 50%;
-  padding: 15px;
-  position: relative;
-  border: $borders $green;
+  color: $secondaryColor;
+  transition: $speed;
 }
 
+i {
+  color: $primaryColor;
+}
+
+/*
+--------------------------------------------------------------------------------
+----------                   NAV AND PORTFOLIO                        ----------
+--------------------------------------------------------------------------------
+*/
 .header {
   display: flex;
 }
 
-.nav {
-  background-color: $vanilla;
-  border-right: none;
+.nav,
+.portfolio {
+  width: 100%;
+  padding: 15px;
+  position: relative;
+  border: $borders $primaryColor;
+  background-color: $backgroundColor;
 }
 
 .portfolio {
-  background-color: $vanilla;
+  border-top: none;
 }
+
 
 .pageList {
   display: flex;
@@ -90,9 +100,25 @@ i {
   align-items: flex-start;
   height: auto;
 }
-.contact {
 
-}
-#email {
-  font-size: 2rem;
+
+/*
+--------------------------------------------------------------------------------
+----------                     LARGE SCREENS                          ----------
+--------------------------------------------------------------------------------
+*/
+@media (min-width: 576px) {
+  .bodyWrap {
+    flex-direction: row;
+  }
+
+  .nav,
+  .portfolio {
+    width: 50%;
+    border: $borders $primaryColor;
+  }
+
+  .nav {
+    border-right: none;
+  }
 }

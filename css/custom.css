@@ -1,76 +1,101 @@
 * {
   box-sizing: border-box; }
 
+/*
+--------------------------------------------------------------------------------
+----------                    PAGE DEFAULTS                           ----------
+--------------------------------------------------------------------------------
+*/
 body {
   margin: 0; }
 
+/* ---------- COLORS ----------   */
+/* Text, lines, borders */
+/* Link hover */
+/* ---------- BODY WRAP ----------   */
 .bodyWrap {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   height: 100vh;
   width: 100vw;
   padding: 30px;
   background-color: #F0EDE5; }
 
-/*
---------------------------------------------------------------------------------
-----------                       FONTS                                ----------
---------------------------------------------------------------------------------
-*/
+/* ---------- FONT ----------   */
 @font-face {
   font-family: TeX Gyre Heros;
   src: url("/fonts/texgyreheros-regular.otf"); }
 
+/* ---------- LINE ----------   */
 hr {
-  color: #79C753;
+  color: #00c853;
   border-style: solid;
   border-width: 1.5px;
   width: 100%;
   margin-left: 0;
   margin-right: 0; }
 
+/* ---------- TEXT STYLES ----------   */
 h1 {
   font-size: 4vw;
   font-weight: normal; }
 
 a, p {
-  font-size: 2.8vw; }
+  font-size: 3vw; }
 
 h1, h2, h3, h4, h5, h6,
 a, p, ul, ol, li {
-  color: #79C753;
+  color: #00c853;
   font-family: "TeX Gyre Heros";
   margin: 0; }
 
 a {
   text-decoration: none;
-  transition: .5s; }
+  transition: 0.5s; }
 
 a:hover {
-  color: #E69060; }
+  color: #ff6d00;
+  transition: 0.5s; }
 
 i {
-  color: #79C753; }
+  color: #00c853; }
 
-.nav,
-.portfolio {
-  width: 50%;
-  padding: 15px;
-  position: relative;
-  border: 3px solid #79C753; }
-
+/*
+--------------------------------------------------------------------------------
+----------                   NAV AND PORTFOLIO                        ----------
+--------------------------------------------------------------------------------
+*/
 .header {
   display: flex; }
 
-.nav {
-  background-color: #F0EDE5;
-  border-right: none; }
+.nav,
+.portfolio {
+  width: 100%;
+  padding: 15px;
+  position: relative;
+  border: 3px solid #00c853;
+  background-color: #F0EDE5; }
 
 .portfolio {
-  background-color: #F0EDE5; }
+  border-top: none; }
 
 .pageList {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   height: auto; }
+
+/*
+--------------------------------------------------------------------------------
+----------                     LARGE SCREENS                          ----------
+--------------------------------------------------------------------------------
+*/
+@media (min-width: 576px) {
+  .bodyWrap {
+    flex-direction: row; }
+  .nav,
+  .portfolio {
+    width: 50%;
+    border: 3px solid #00c853; }
+  .nav {
+    border-right: none; } }

@@ -16,12 +16,14 @@ body {
 $speed: 0.5s;
 
 /* ---------- COLORS ----------   */
-$primaryColor: #00c853; /* Text, lines, borders */
-$secondaryColor: #ff6d00; /* Link hover */
-$backgroundColor: #F0EDE5;
+$primaryColor: #eeff41; /* Text, lines, borders #41ff52 */
+$secondaryColor: #ff41ee; /* Link hover */
+$backgroundColor: #5241ff;
+;
 
-$mainFont: 'TeX Gyre Heros';
-$borders: 3px solid;
+$mainFont: 'Zarathustra';
+// $borders: 3px solid
+$borders: 3px solid;;
 
 /* ---------- BODY WRAP ----------   */
 .bodyWrap {
@@ -34,12 +36,13 @@ $borders: 3px solid;
 }
 
 /* ---------- FONT ----------   */
-@font-face { font-family: TeX Gyre Heros; src: url('/fonts/texgyreheros-regular.otf'); }
+@font-face { font-family: Zarathustra; src: url('/fonts/zarathustra-v01.otf'); }
 
 /* ---------- LINE ----------   */
 hr {
   color: $primaryColor;
   border-style: solid;
+  // border-width: 1.5px;
   border-width: 1.5px;
   width: 100%;
   margin-left: 0;
@@ -47,8 +50,10 @@ hr {
 }
 
 /* ---------- TEXT STYLES ----------   */
-h1 {font-size: 4vw; font-weight: normal;}
-a, p { font-size: 3vw;}
+a, p {
+  font-size: 24px;
+  font-weight: 500;
+}
 
 h1, h2, h3, h4, h5, h6,
 a, p, ul, ol, li {
@@ -71,6 +76,12 @@ i {
   color: $primaryColor;
 }
 
+.fa-hat-wizard {
+  font-size: 3vw;
+  margin: 0 ;
+  top: 0;
+  width: 100%;
+}
 /*
 --------------------------------------------------------------------------------
 ----------                   NAV AND PORTFOLIO                        ----------
@@ -85,12 +96,12 @@ i {
   width: 100%;
   padding: 15px;
   position: relative;
-  border: $borders $primaryColor;
+  // border: $borders $primaryColor;
   background-color: $backgroundColor;
 }
 
 .portfolio {
-  border-top: none;
+  //border-top: none;
   height: auto;
 }
 
@@ -107,19 +118,24 @@ i {
 --------------------------------------------------------------------------------
 ----------                     LARGE SCREENS                          ----------
 --------------------------------------------------------------------------------
-*/
-@media (min-width: 576px) {
-  .bodyWrap {
-    flex-direction: row;
-  }
-
-  .nav,
-  .portfolio {
-    width: 50%;
-    border: $borders $primaryColor;
-  }
-
-  .nav {
-    border-right: none;
-  }
-}
+// */
+// @media (min-width: 576px) {
+//   .bodyWrap {
+//     flex-direction: row;
+//   }
+//
+//   .nav,
+//   .portfolio {
+//     // width: 50%;
+//
+//     width: 100%;
+//     border: $borders $primaryColor;
+//     a {
+//       font-size: 4vw;
+//     }
+//   }
+//
+//   // .nav {
+//   //   border-right: none;
+//   // }
+// }
